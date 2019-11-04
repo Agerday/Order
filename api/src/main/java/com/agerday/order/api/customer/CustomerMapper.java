@@ -1,5 +1,6 @@
-package com.agerday.order.api;
+package com.agerday.order.api.customer;
 
+import com.agerday.order.api.customer.CustomerDto;
 import com.agerday.order.domain.Customer;
 
 public class CustomerMapper {
