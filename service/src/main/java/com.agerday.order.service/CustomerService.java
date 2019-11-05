@@ -26,6 +26,7 @@ public class CustomerService {
     public Customer getCustomerById(String id){
         return customerRepository.getCustomerById(id);
     }
+
     public Collection<Customer> getAllCustomers(){
         return customerRepository.getAllCustomers();
     }

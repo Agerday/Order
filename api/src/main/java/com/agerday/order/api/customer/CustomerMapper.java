@@ -26,13 +26,13 @@ public class CustomerMapper {
                 .withPhoneNumber(customer.getPhoneNumber());
     }
 
-    public CreateCustomerDto toCreateDto(Customer customer) {
-        return new CreateCustomerDto()
-                .withFirstName(customer.getFirstName())
-                .withLastName(customer.getLastName())
-                .withAddress(customer.getAddress())
-                .withEmail(customer.getEmail())
-                .withPhoneNumber(customer.getPhoneNumber());
-    }
+//    public CreateCustomerDto toCreateDto(Customer customer) {
+//        return new CreateCustomerDto()
+//                .withFirstName(customer.getFirstName())
+//                .withLastName(customer.getLastName())
+//                .withAddress(customer.getAddress())
+//                .withEmail(customer.getEmail())
+//                .withPhoneNumber(customer.getPhoneNumber());
+//    }
 
 }

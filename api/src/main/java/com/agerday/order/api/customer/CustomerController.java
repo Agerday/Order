@@ -52,9 +52,9 @@ public class CustomerController {
 
     public boolean isValidCustomer(CreateCustomerDto createCustomerDto) {
         return (createCustomerDto.getFirstName() != null
-                || createCustomerDto.getLastName() != null
-                || createCustomerDto.getEmail() != null
-                || createCustomerDto.getAddress() != null
-                || createCustomerDto.getPhoneNumber() != null);
+                && createCustomerDto.getLastName() != null
+                && createCustomerDto.getEmail() != null
+                && createCustomerDto.getAddress() != null
+                && createCustomerDto.getPhoneNumber() != null);
     }
 }

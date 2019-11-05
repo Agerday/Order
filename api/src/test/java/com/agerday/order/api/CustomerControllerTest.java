@@ -27,31 +27,31 @@ class CustomerControllerTest {
     @Rule
     public ExpectedException exceptionRule = ExpectedException.none();
 
-    @Test
-    void givenCustomerField_whenFieldIsMissing_throwException() {
+//    @Test
+//    void givenCustomerField_whenFieldIsMissing_throwException() {
+//
+//        CreateCustomerDto createCustomerDto = new CreateCustomerDto()
+//                .withEmail("test")
+//                .withAddress("test");
+//
+//        customerController.createCustomer(createCustomerDto);
+//        exceptionRule.expect(IllegalArgumentException.class);
+//        exceptionRule.expectMessage("Missing value");
+//    }
 
+    @Test
+    void givenNewCustomer_whenFieldsAreNotEmpty(){
         CreateCustomerDto createCustomerDto = new CreateCustomerDto()
                 .withEmail("test")
-                .withAddress("test");
+                .withAddress("test")
+                .withFirstName("Jean")
+                .withLastName("Poulet")
+                .withPhoneNumber("0477757575");
 
-        customerController.createCustomer(createCustomerDto);
-        exceptionRule.expect(IllegalArgumentException.class);
-        exceptionRule.expectMessage("Missing value");
+        CustomerDto customer = customerController.createCustomer(createCustomerDto);
+
+        Assertions.assertThat(createCustomerDto).isEqualToComparingFieldByField(customer);
+
     }
-
-//    @Test
-//    void givenNewCustomer_whenFieldsAreNotEmpty(){
-//        CustomerDto createCustomerDto = new CustomerDto()
-//                .withEmail("test")
-//                .withAddress("test")
-//                .withFirstName("Jean")
-//                .withLastName("Poulet")
-//                .withPhoneNumber("0477757575");
-//
-//        Customer customer = customerMapper.toDomain(customerController.createCustomer(CustomerDto));
-//
-//        Assertions.assertThat(createCustomerDto).isEqualToComparingFieldByField(customer);
-//
-//    }
 
 }

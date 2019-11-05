@@ -33,7 +33,7 @@ public class Item {
         return price;
     }
 
-    public int getStock() {
+    public int getAmount() {
         return amount;
     }
 }
