@@ -13,13 +13,13 @@ public class ItemRepository {
         items = new ArrayList<>();
     }
 
-    public Item addCustomer(Item customer){
-        items.add(customer);
-        return customer;
+    public Item addItem (Item item){
+        items.add(item);
+        return item;
     }
 
 
-    public List<Item> getAllCustomers(){
+    public List<Item> getAllItems(){
         return items;
     }
 }

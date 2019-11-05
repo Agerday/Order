@@ -1,17 +1,12 @@
 package com.agerday.order.api.customer;
 
 public class CreateCustomerDto {
-    private String id;
     private String firstName;
     private String lastName;
     private String email;
     private String address;
     private String phoneNumber;
 
-    public CreateCustomerDto withId(String id) {
-        this.id = id;
-        return this;
-    }
 
     public CreateCustomerDto withFirstName(String firstName) {
         this.firstName = firstName;
@@ -36,10 +31,6 @@ public class CreateCustomerDto {
     public CreateCustomerDto withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getFirstName() {

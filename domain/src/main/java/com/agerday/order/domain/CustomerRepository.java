@@ -3,23 +3,30 @@ package com.agerday.order.domain;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 public class CustomerRepository {
-    private List<Customer> customers;
+    private ConcurrentHashMap<String, Customer> customers;
 
     public CustomerRepository(){
-        customers = new ArrayList<>();
+        customers = new ConcurrentHashMap<>();
     }
 
     public Customer addCustomer(Customer customer){
-        customers.add(customer);
+        customers.put(customer.getId(),customer);
         return customer;
     }
 
-    public List<Customer> getAllCustomers(){
-        return customers;
+    public Customer getCustomerById(String id){
+       Customer foundCustomer = customers.get(id);
+       return foundCustomer;
+    }
+
+    public Collection<Customer> getAllCustomers(){
+        return customers.values();
     }
 }
 

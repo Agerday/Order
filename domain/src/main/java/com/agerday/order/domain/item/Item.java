@@ -1,16 +1,24 @@
 package com.agerday.order.domain.item;
 
+import java.util.UUID;
+
 public class Item {
+    private String id;
     private String name;
     private String description;
     private double price;
-    private int stock;
+    private int amount;
 
-    public Item(String name, String description, double price, int stock) {
+    public Item(String name, String description, double price, int amount) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.description = description;
         this.price = price;
-        this.stock = stock;
+        this.amount = amount;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName() {
@@ -26,6 +34,6 @@ public class Item {
     }
 
     public int getStock() {
-        return stock;
+        return amount;
     }
 }
