@@ -9,7 +9,7 @@ public class ItemMapper {
         return new Item(
                 createItemDto.getName(),
                 createItemDto.getDescription(),
-                (int) createItemDto.getPrice(),
+                createItemDto.getPrice(),
                 createItemDto.getAmount()
 
         );

@@ -22,7 +22,7 @@ public class ItemDto {
         return this;
     }
 
-    public ItemDto withPrice(Double price){
+    public ItemDto withPrice(double price){
         this.price=price;
         return this;
     }

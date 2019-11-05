@@ -1,4 +1,4 @@
-package com.agerday.order.domain;
+package com.agerday.order.domain.customer;
 
 import java.util.UUID;
 

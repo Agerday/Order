@@ -1,10 +1,8 @@
-package com.agerday.order.domain;
+package com.agerday.order.domain.customer;
 
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository

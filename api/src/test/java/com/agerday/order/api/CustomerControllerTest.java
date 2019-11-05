@@ -4,16 +4,13 @@ import com.agerday.order.api.customer.CreateCustomerDto;
 import com.agerday.order.api.customer.CustomerController;
 import com.agerday.order.api.customer.CustomerDto;
 import com.agerday.order.api.customer.CustomerMapper;
-import com.agerday.order.domain.Customer;
-import com.agerday.order.domain.CustomerRepository;
+import com.agerday.order.domain.customer.CustomerRepository;
 import com.agerday.order.service.CustomerService;
 import org.assertj.core.api.Assertions;
 import org.junit.Rule;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
-
-import java.lang.reflect.Member;
 
 class CustomerControllerTest {
 

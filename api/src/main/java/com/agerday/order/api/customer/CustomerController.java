@@ -1,7 +1,7 @@
 package com.agerday.order.api.customer;
 
 
-import com.agerday.order.domain.Customer;
+import com.agerday.order.domain.customer.Customer;
 import com.agerday.order.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

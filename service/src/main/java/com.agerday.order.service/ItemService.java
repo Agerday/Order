@@ -5,6 +5,7 @@ import com.agerday.order.domain.item.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.List;
 
 @Component
@@ -20,7 +21,7 @@ public class ItemService {
         return itemRepository.addItem(item);
     }
 
-    public List<Item> getAllItems(){
+    public Collection<Item> getAllItems(){
         return itemRepository.getAllItems();
     }
 }

@@ -17,7 +17,7 @@ public class CreateItemDto {
         return this;
     }
 
-    public CreateItemDto withPrice(Double price){
+    public CreateItemDto withPrice(double price){
         this.price=price;
         return this;
     }

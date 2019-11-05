@@ -1,6 +1,6 @@
 package com.agerday.order.api.customer;
 
-import com.agerday.order.domain.Customer;
+import com.agerday.order.domain.customer.Customer;
 import org.springframework.stereotype.Component;
 
 @Component
