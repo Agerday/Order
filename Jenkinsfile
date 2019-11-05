@@ -9,27 +9,27 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install test-compile'
+                sh 'JAVA_HOME=/var/jenkins_home/jdk-12/ mvn clean install test-compile'
             }
         }
         stage('api') {
             steps {
-                sh 'mvn clean test -pl :api'
+                sh 'JAVA_HOME=/var/jenkins_home/jdk-12/ mvn clean test -pl :api'
             }
         }
         stage('service') {
                     steps {
-                        sh 'mvn clean test -pl :service'
+                        sh 'JAVA_HOME=/var/jenkins_home/jdk-12/ mvn clean test -pl :service'
                     }
         }
         stage('domain') {
             steps {
-                sh 'mvn clean test -pl :domain'
+                sh 'JAVA_HOME=/var/jenkins_home/jdk-12/ mvn clean test -pl :domain'
             }
         }
         stage('infrastructure') {
             steps {
-                sh 'mvn clean test -pl :infrastructure'
+                sh 'JAVA_HOME=/var/jenkins_home/jdk-12/ mvn clean test -pl :infrastructure'
             }
         }
         
